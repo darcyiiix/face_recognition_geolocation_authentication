@@ -1,4 +1,5 @@
-const BACKEND_URL = 'http://localhost:3001'
+
+const BACKEND_URL = `http://localhost:${process.env.API_PORT || 3001}`
 
 // BASE AUTH
 const AUTH_URL = '/api/auth'
