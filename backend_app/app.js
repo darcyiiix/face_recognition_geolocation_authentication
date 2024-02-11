@@ -17,6 +17,10 @@ const path = require('path')
 const app = express()
 app.use(cors())
 app.use(express.json({limit: '5mb'}))
+const corsOptions = {
+    origin: FRONTEND_URL
+}
+app.use(express.json({limit: '5mb'}))
 app.use(express.static('public'))
 
 
@@ -80,7 +84,7 @@ app.post('/api/auth/register', cors(corsOptions), async (req, res) => {
     
 })
 
-app.post('face-recognition-geolocation-authentication.vercel.app/login', async (req, res) => {
+app.post('face-recognition-geolocation-authentication.vercel.app/login', cors(corsOptions), async (req, res) => {
     function checkCoordinates(allowedCoordinates, currentCoordinates) {
         // Adjust the threshold as needed
         const coordinateThreshold = 0.1;
