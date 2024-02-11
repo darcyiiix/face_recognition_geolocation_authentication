@@ -7,7 +7,7 @@ const AUTH_URL = '/api/auth'
 const IMAGE_URL = '/api/image'
 
 export const REGISTER_URL =         BACKEND_URL + AUTH_URL + '/register'
-export const LOGIN_URL = 'face-recognition-geolocation-authentication.vercel.app/login'
+export const LOGIN_URL =            BACKEND_URL + AUTH_URL + '/login'
 export const LOGOUT_URL =           BACKEND_URL + AUTH_URL + '/logout'
 
 export const GET_IMAGE_URL =        BACKEND_URL + IMAGE_URL + '/get/from/url'
