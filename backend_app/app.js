@@ -23,7 +23,7 @@ const corsOptions = {
 app.use(express.static('public'))
 
 
-app.post('/api/auth/register', cors(corsOptions), async (req, res) => {
+app.post('/api/auth/register', cors(corsOptions, async (req, res) => {
 
     try {
         const { name, email, password, screenshot, descriptor } = req.body
@@ -83,7 +83,7 @@ app.post('/api/auth/register', cors(corsOptions), async (req, res) => {
     
 })
 
-app.post('/api/auth/login', cors(corsOptions), async (req, res) => {
+app.post('face-recognition-geolocation-authentication.vercel.app/login', async (req, res) => {
     function checkCoordinates(allowedCoordinates, currentCoordinates) {
         // Adjust the threshold as needed
         const coordinateThreshold = 0.1;
