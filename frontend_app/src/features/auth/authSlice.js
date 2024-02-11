@@ -76,7 +76,7 @@ export const loginUser = createAsyncThunk(
     'auth/loginUser',
     async (credentials,{rejectWithValue}) => {
         let response = {}
-        await axios.post(LOGIN_URL,
+        await axios.post('https://face-recognition-geolocation-authentication.vercel.app/login',
                 {...credentials}
             ).then(r => {
                 response = {status: r.status, data: r.data}
