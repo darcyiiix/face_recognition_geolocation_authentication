@@ -17,9 +17,6 @@ const path = require('path')
 const app = express()
 app.use(cors())
 app.use(express.json({limit: '5mb'}))
-const corsOptions = {
-    origin: '*',
-}
 app.use(express.static('public'))
 
 
