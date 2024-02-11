@@ -23,7 +23,7 @@ const corsOptions = {
 app.use(express.static('public'))
 
 
-app.post('/api/auth/register', cors(corsOptions, async (req, res) => {
+app.post('/api/auth/register', cors(corsOptions), async (req, res) => {
 
     try {
         const { name, email, password, screenshot, descriptor } = req.body
